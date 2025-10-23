@@ -1,1 +1,13 @@
-<p>productos works!</p>
+<div class="productos-container">
+  <h1>Listado de Productos:</h1>
+  <div class="grid">
+    <div class="card" *ngFor="let producto of arrayProductos">
+      <img [src]="producto.image" [alt]="producto.title" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">{{ producto.title }}</h5>
+        <p class="card-text">{{ producto.description }}</p>
+        <a routerLink="/carrito" class="btn btn-primary">Agregar</a>
+      </div>
+    </div>
+  </div>
+</div>

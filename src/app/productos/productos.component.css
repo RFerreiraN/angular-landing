@@ -1,0 +1,66 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  padding: 1rem;
+}
+
+.card {
+  width: 180px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100px; /* reducir para dejar más espacio al contenido */
+  object-fit: contain;
+  background-color: #f9f9f9;
+}
+
+.card-body {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* ocupa todo el espacio disponible */
+}
+
+.card-title {
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* título en una sola línea */
+}
+
+.card-text {
+  font-size: 0.75rem;
+  color: #555;
+  line-height: 1.1;
+  flex-grow: 1; /* ocupa el espacio restante */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* máximo 2 líneas */
+  -webkit-box-orient: vertical;
+}
+
+.btn {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.5rem;
+  align-self: center;
+  flex-shrink: 0; /* nunca se encoge */
+  margin-top: 0.3rem;
+}
