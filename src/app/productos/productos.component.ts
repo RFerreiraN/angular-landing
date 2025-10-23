@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Producto } from 'src/Models/producto.model';
 
 @Component({
@@ -9,8 +10,11 @@ import { Producto } from 'src/Models/producto.model';
 export class ProductosComponent implements OnInit {
   urlFetch: string = 'https://fakestoreapi.com/products';
   arrayProductos: Producto[] = [];
+  urlDetalleProducto : string = `${this.urlFetch} `
 
-  constructor() { }
+  constructor(
+    private _router : Router
+  ) { }
 
   async FetchProductos(): Promise<void> {
     try {
@@ -21,6 +25,14 @@ export class ProductosComponent implements OnInit {
     } catch (error) {
       console.error('Ha ocurrido el siguiente error: ', error)
     }
+  }
+
+  productoDetalle(productoId : number){
+    this._router.navigate(['/productos', productoId])
+  }
+
+  agregarCarrito(id : number){
+
   }
 
   ngOnInit(): void {

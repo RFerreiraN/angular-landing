@@ -1,1 +1,12 @@
-<p>productos-detalles works!</p>
+<div *ngIf="productoDetalle; else cargando">
+  <h2>{{ productoDetalle.title }}</h2>
+  <img [src]="productoDetalle.image" [alt]="productoDetalle.title" style="max-width:300px;">
+  <p>{{ productoDetalle.description }}</p>
+  <p><strong>Precio:</strong> {{ productoDetalle.price | currency:'EUR' }}</p>
+  <p><strong>Categoría:</strong> {{ productoDetalle.category }}</p>
+  <button class="btn btn-outline-success" (click)="regresar()">Volver</button> 
+</div>
+
+<ng-template #cargando>
+  <p>Cargando producto...</p>
+</ng-template>

@@ -6,7 +6,10 @@
       <div class="card-body">
         <h5 class="card-title">{{ producto.title }}</h5>
         <p class="card-text">{{ producto.description }}</p>
-        <a routerLink="/carrito" class="btn btn-primary">Agregar</a>
+        <div class="d-flex gap-2">
+          <a (click)="productoDetalle(producto.id)" class="btn btn-outline-warning">Detalles</a>
+          <a (click)="agregarCarrito(producto.id)" class="btn btn-outline-warning">Agregar</a>
+        </div>
       </div>
     </div>
   </div>
