@@ -37,6 +37,10 @@ export class ProductosDetallesComponent implements OnInit {
     }
   }
 
+  agregarCarrito(id : number){
+
+  }
+
   regresar(){
     this._router.navigate(['/productos'])
   }

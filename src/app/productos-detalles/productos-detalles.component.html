@@ -4,7 +4,10 @@
   <p>{{ productoDetalle.description }}</p>
   <p><strong>Precio:</strong> {{ productoDetalle.price | currency:'EUR' }}</p>
   <p><strong>Categoría:</strong> {{ productoDetalle.category }}</p>
-  <button class="btn btn-outline-success" (click)="regresar()">Volver</button> 
+  <div class="d-flex gap-2">
+    <button class="btn btn-outline-success" (click)="regresar()">Volver</button> 
+    <button (click)="agregarCarrito(productoDetalle.id)" class="btn btn-outline-success">Agregar</button>
+  </div>
 </div>
 
 <ng-template #cargando>
