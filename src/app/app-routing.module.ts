@@ -5,11 +5,15 @@ import { ProductosComponent } from './productos/productos.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ProductosDetallesComponent } from './productos-detalles/productos-detalles.component';
+import { ProductosLimpiezaComponent } from './productos-limpieza/productos-limpieza.component';
+import { ProductosLimpiezaDetallesComponent } from './productos-limpieza-detalles/productos-limpieza-detalles.component';
 
 const routes: Routes = [
   { path : '', component : HomeComponent},
   { path : 'productos', component : ProductosComponent},
   { path : 'productos/:productoId', component : ProductosDetallesComponent},
+  { path : 'productosLimpieza' , component : ProductosLimpiezaComponent},
+  { path : 'productosLimpieza/:Id' , component : ProductosLimpiezaDetallesComponent},
   { path : 'carrito', component : CarritoComponent },
   { path : 'contacto', component : ContactoComponent },
   { path : '**' , redirectTo : ''} 

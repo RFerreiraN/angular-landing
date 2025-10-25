@@ -8,6 +8,8 @@ import { ProductosComponent } from './productos/productos.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { ProductosDetallesComponent } from './productos-detalles/productos-detalles.component';
+import { ProductosLimpiezaComponent } from './productos-limpieza/productos-limpieza.component';
+import { ProductosLimpiezaDetallesComponent } from './productos-limpieza-detalles/productos-limpieza-detalles.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ProductosDetallesComponent } from './productos-detalles/productos-detal
     ProductosComponent,
     ContactoComponent,
     CarritoComponent,
-    ProductosDetallesComponent
+    ProductosDetallesComponent,
+    ProductosLimpiezaComponent,
+    ProductosLimpiezaDetallesComponent
   ],
   imports: [
     BrowserModule,

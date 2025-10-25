@@ -10,7 +10,8 @@ import { Producto } from 'src/Models/producto.model';
 export class ProductosComponent implements OnInit {
   urlFetch: string = 'https://fakestoreapi.com/products';
   arrayProductos: Producto[] = [];
-  urlDetalleProducto : string = `${this.urlFetch} `
+  urlDetalleProducto : string = `${this.urlFetch}`;
+  // productosList? = productosList;
 
   constructor(
     private _router : Router
