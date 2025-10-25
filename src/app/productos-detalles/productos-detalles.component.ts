@@ -11,13 +11,13 @@ export class ProductosDetallesComponent implements OnInit {
   apiUrl = 'https://fakestoreapi.com/products';
   productoDetalle!: Producto | null;
   /*
-  arrayProductoDetalle!: Producto | null = 
+  ProductoDetalle!: Producto | null = 
   le dice al compilador de TypeScript:
   “Tranquilo, sé que esta propiedad no será null o undefined cuando la use, aunque tú no lo puedas verificar ahora.”
   */
   constructor(
     private _route: ActivatedRoute,
-    private _router : Router
+    private _router : Router, 
   ) { }
 
   ngOnInit(): void {
